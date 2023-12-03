@@ -437,7 +437,6 @@ GameObject:
   m_Component:
   - component: {fileID: 998096173}
   - component: {fileID: 998096174}
-  - component: {fileID: 998096175}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -474,7 +473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
-  - {fileID: 998096175}
+  - {fileID: 0}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -492,18 +491,6 @@ MonoBehaviour:
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
---- !u!114 &998096175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998096172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2af9f652ee6cc2249896523aac55d1f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1323366158
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,21 +549,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0416\u043C\u0438 1, 2, 3 - \u0434\u043B\u044F \u0432\u044B\u0437\u043E\u0432\u0430
-    \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439, \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0442\u0435\u043B\u044C
-    \u0438\u0445 \u043E\u0442\u0441\u043B\u0435\u0434\u0438\u0442, \u0430 \u043A\u043E\u0433\u0434\u0430
-    \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0431\u0443\u0434\u0435\u0442
-    \u0441\u043E\u0432\u0435\u0440\u0448\u0435\u043D\u043E 5 \u0440\u0430\u0437 \u0438
-    \u0432\u044B\u0437\u043E\u0432\u0435\u0442 \u043B\u043E\u0433 \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u044F.\n\n\u0420\u0430\u0437\u043D\u0438\u0446\u0430
-    \u043C\u0435\u0436\u0434\u0443 \u0441\u0438\u0441\u0442\u0435\u043C\u0430\u043C\u0438
-    \"\u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0442\u0435\u043B\u044C\" \u0438
-    \"\u0441\u043E\u0431\u044B\u0442\u0438\u044F\". \u041F\u0435\u0440\u0432\u0430\u044F
-    \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0435\u0442 \u0437\u0430 \u0432\u0441\u0435\u043C
-    \u0447\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u043C.
-    \u0412\u0442\u043E\u0440\u0430\u044F \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0435\u0442
-    \u0437\u0430 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u043C, \u043E\u043F\u0438\u0441\u044B\u0432\u0430\u044E\u0449\u0438\u043C
-    \u0447\u0442\u043E \u043F\u0440\u043E\u0438\u0437\u043E\u0448\u043B\u043E \u043D\u0435\u0447\u0442\u043E
-    \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u043E\u0435."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -811,7 +784,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0428\u0430\u0431\u043B\u043E\u043D \u043F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F:\n\"Observer\""
+  m_text: "\u0428\u0430\u0431\u043B\u043E\u043D \u043F\u0440\u043E\u0435\u043A\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F:\n\"Prototype\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

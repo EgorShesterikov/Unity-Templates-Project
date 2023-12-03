@@ -8,7 +8,7 @@ namespace Observer
         {
             Container.BindInterfacesAndSelfTo<InputHandler>().FromNew().AsSingle();
 
-            Container.Bind<AchievementObserver>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<AchievementObserver>().FromNew().AsSingle();
 
             Container.BindInterfacesAndSelfTo<EventPoster>().FromNew().AsSingle();   
         }
