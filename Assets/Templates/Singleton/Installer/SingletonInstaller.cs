@@ -6,7 +6,9 @@ namespace Singleton
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<InputHandler>().FromNew().AsSingle();
+
+            Container.BindInterfacesAndSelfTo<Game>().FromNew().AsSingle();
         }
     }
 }

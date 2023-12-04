@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using UnityEngine;
 using Zenject;
 
-namespace Singleton
+namespace State
 {
     public class InputHandler : ITickable
     {

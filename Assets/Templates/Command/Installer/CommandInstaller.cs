@@ -2,7 +2,7 @@ using Zenject;
 
 namespace Command
 {
-    public class SingletonInstaller : MonoInstaller
+    public class CommandInstaller : MonoInstaller
     {
         public override void InstallBindings()
         {
