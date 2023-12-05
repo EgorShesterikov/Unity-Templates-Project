@@ -13,18 +13,18 @@ namespace Observer
         {
             _input = input;
 
-            _input.ClickedAlpha1 += () => Notifly(MassageTypes.Jump);
-            _input.ClickedAlpha2 += () => Notifly(MassageTypes.Attack);
-            _input.ClickedAlpha3 += () => Notifly(MassageTypes.Move);
+            _input.ClickedAlpha1 += NotiflyJump;
+            _input.ClickedAlpha2 += NotiflyAttack;
+            _input.ClickedAlpha3 += NotiflyMove;
 
             _observers = new List<IObserver>(observers);
         }
 
         public void Dispose()
         {
-            _input.ClickedAlpha1 -= () => Notifly(MassageTypes.Jump);
-            _input.ClickedAlpha2 -= () => Notifly(MassageTypes.Attack);
-            _input.ClickedAlpha3 -= () => Notifly(MassageTypes.Move);
+            _input.ClickedAlpha1 -= NotiflyJump;
+            _input.ClickedAlpha2 -= NotiflyAttack;
+            _input.ClickedAlpha3 -= NotiflyMove;
         }
 
         public void AddObserver(IObserver observer)
@@ -38,6 +38,13 @@ namespace Observer
             foreach (IObserver observer in _observers)
                 observer.OnNotify(massage);
         }
+
+        private void NotiflyJump()
+            => Notifly(MassageTypes.Jump);
+        private void NotiflyAttack()
+            => Notifly(MassageTypes.Attack);
+        private void NotiflyMove()
+            => Notifly(MassageTypes.Move);
     }
 
 }

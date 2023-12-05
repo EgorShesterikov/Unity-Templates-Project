@@ -11,15 +11,15 @@ namespace Prototype
         public UnitSpawner(InputHandler input, UnitFactory factory, UnitTypes type)
         {
             _input = input;
-            _input.ClickedSpace += () => SpawnUnit();
+            _input.ClickedSpace += SpawnUnit;
 
             _prototype = factory.Get(type);
         }
 
         public void Dispose()
-            => _input.ClickedSpace -= () => SpawnUnit();
+            => _input.ClickedSpace -= SpawnUnit;
 
-        public Unit SpawnUnit()
+        public void SpawnUnit()
             => _prototype.Clone();
     }
 }

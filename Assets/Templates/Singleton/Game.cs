@@ -11,10 +11,13 @@ namespace Singleton
         public Game(InputHandler input)
         {
             _input = input;
-            _input.ClickedSpace += () => Log.Instance.WriteLog(LogInfo);
+            _input.ClickedSpace += WriteLog;
         }
 
         public void Dispose()
-            => _input.ClickedSpace -= () => Log.Instance.WriteLog(LogInfo);
+            => _input.ClickedSpace -= WriteLog;
+
+        private void WriteLog()
+            => Log.Instance.WriteLog(LogInfo);
     }
 }

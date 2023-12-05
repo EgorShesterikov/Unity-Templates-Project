@@ -16,16 +16,23 @@ namespace Command
 
             _inputHandler = inputHandler;
 
-            _inputHandler.ClickedAlpha1 += () => _factory.Get<AttackCommand>().Execute();
-            _inputHandler.ClickedAlpha2 += () => _factory.Get<JumpCommand>().Execute();
-            _inputHandler.ClickedAlpha3 += () => _factory.Get<MoveCommand>().Execute();
+            _inputHandler.ClickedAlpha1 += AttackCommandExecute;
+            _inputHandler.ClickedAlpha2 += JumpCommandExecute;
+            _inputHandler.ClickedAlpha3 += MoveCommandExecute;
         }
 
         public void Dispose()
         {
-            _inputHandler.ClickedAlpha1 -= () => _factory.Get<AttackCommand>().Execute();
-            _inputHandler.ClickedAlpha2 -= () => _factory.Get<JumpCommand>().Execute();
-            _inputHandler.ClickedAlpha3 -= () => _factory.Get<MoveCommand>().Execute();
-        }        
+            _inputHandler.ClickedAlpha1 -= AttackCommandExecute;
+            _inputHandler.ClickedAlpha2 -= JumpCommandExecute;
+            _inputHandler.ClickedAlpha3 -= MoveCommandExecute;
+        }
+
+        private void AttackCommandExecute()
+            => _factory.Get<AttackCommand>().Execute();
+        private void JumpCommandExecute()
+            => _factory.Get<JumpCommand>().Execute();
+        private void MoveCommandExecute()
+            => _factory.Get<MoveCommand>().Execute();
     }
 }

@@ -6,7 +6,9 @@ namespace State
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<InputHandler>().FromNew().AsSingle();
+
+            Container.BindInterfacesAndSelfTo<StateMachine>().FromNew().AsSingle().NonLazy();
         }
     }
 }
