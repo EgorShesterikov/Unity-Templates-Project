@@ -13,5 +13,4 @@ namespace Observer
             Container.BindInterfacesAndSelfTo<EventPoster>().FromNew().AsSingle();   
         }
     }
-
 }
