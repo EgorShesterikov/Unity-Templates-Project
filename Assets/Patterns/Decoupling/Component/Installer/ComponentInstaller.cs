@@ -6,7 +6,11 @@ namespace Component
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<ActorInputComponent>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<ActorPhysicsComponent>().FromNew().AsSingle();
+            Container.BindInterfacesAndSelfTo<ActorSpriteComponent>().FromNew().AsSingle();
+
+            Container.BindInterfacesAndSelfTo<Actor>().FromNew().AsSingle().NonLazy();
         }
     }
 }
