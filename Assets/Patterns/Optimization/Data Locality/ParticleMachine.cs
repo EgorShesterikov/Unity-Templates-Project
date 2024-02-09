@@ -1,4 +1,6 @@
+using NUnit.Framework.Internal;
 using System;
+using UnityEngine;
 using Zenject;
 
 namespace DataLocality
@@ -17,6 +19,8 @@ namespace DataLocality
                 _particles[i] = new Particle();
                 ActivateParticle(i);
             }
+
+            DeactivateParticle(3);
         }
 
         public void Tick()

@@ -11,7 +11,6 @@ namespace DataLocality
         public void SetActiv(bool value)
             => _isActive = value;
 
-        public void Update() 
-            => Debug.Log("Particle animation");
+        public void Update() { }
     }
 }

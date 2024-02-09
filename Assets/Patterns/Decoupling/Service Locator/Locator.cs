@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace ServiceLocator
+﻿namespace ServiceLocator
 {
     public static class Locator
     {
